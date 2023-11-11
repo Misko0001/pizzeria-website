@@ -1,0 +1,799 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+/* Nav menu */
+
+nav {
+    display: flex;
+    padding: 0.5% 15% 0 15%;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(20, 20, 20);
+}
+.nav-menu {
+    text-align: right;
+}
+.active {
+    color: rgb(214, 65, 65) !important;
+}
+.nav-menu ul li {
+    display: inline-block;
+    padding: 0px 10px;
+}
+.nav-menu ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+.nav-menu ul li a:hover {
+    color: rgb(214, 65, 65);
+    transition: 0.2s;
+}
+.btn-login a {
+    padding: 10px !important;
+    border-style: solid;
+    border-color: rgb(214, 65, 65);
+    background-color: rgb(214, 65, 65);
+    font-weight: bold;
+}
+.btn-login a:hover {
+    color: white !important;
+    background-color: red;
+    border-color: red;
+    transition: 0.2s;
+}
+
+/* Footer */
+
+.footer {
+    padding: 50px 0;
+    margin-top: 100px;
+    background-color: rgb(20, 20, 20);
+}
+.footer p {
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
+
+/* Home */
+
+.background {
+    min-height: 95vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(../img/background.jpg);
+}
+.home {
+    padding-top: 8%;
+    text-align: center;
+}
+.home h1 {
+    /* color: rgb(255, 115, 0); */
+    color: rgb(214, 65, 65);
+    font-size: 5em;
+}
+.home h2{
+    color: white;
+    font-size: 2em;
+}
+.home p{
+    color: rgb(245, 233, 233);
+    font-size: 1.1em;
+}
+.btn-menu {
+    padding-top: 5%;
+    text-align: center;
+}
+.btn-menu a {
+    padding: 15px;
+    border-style: solid;
+    border-radius: 0px;
+    border-color: rgb(214, 65, 65);
+    background-color: rgb(214, 65, 65);
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+}
+.btn-menu a:hover {
+    color: white;
+    background-color: red;
+    border-color: red;
+    transition: 0.2s;
+}
+.home-about {
+    width: 70%;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: rgb(241, 232, 232);
+}
+.home-about h1 {
+    text-align: center;
+    padding-bottom: 20px;
+}
+.home-about p {
+    color: rgb(101, 101, 101);
+    font-size: 18px;
+    line-height: 22px;
+}
+.btn-about {
+    text-align: center;
+}
+.btn-about a {
+    padding: 15px;
+    border-style: solid;
+    border-color: rgb(50, 50, 50);
+    background-color: rgb(50, 50, 50);
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+}
+.btn-about a:hover {
+    background-color: black;
+    border-color: black;
+    transition: 0.2s;
+}
+
+/* Menu */
+
+.menu {
+    width: 100%;
+    max-width: 1350px;
+    margin: 20px auto;
+}
+.menu h1 {
+    display: inline-block;
+    padding: 50px 0 20px 0;
+}
+.menu-category {
+    padding-bottom: 30px;
+} 
+.menu-category div {
+    display: flex;
+    justify-content: space-between;
+}
+.menu-category div img {
+    width: 180px;
+    height: 180px;
+    border: 1px solid grey;
+    border-radius: 20px;
+    margin: 20px 0 0 30px;
+}
+.menu-col {
+    display: inline !important;
+    width: 50%;
+    margin: 5px 20px;
+    padding: 10px;
+}
+.menu-col-one {
+    margin-left: 50%;
+}
+.menu-food {
+    display: inline-block;
+    padding-top: 20px;
+    font-size: 20px;
+}
+.menu-price {
+    padding-top: 5px;
+    font-weight: bold;
+}
+.menu-amount {
+    width: 40px;
+    padding: 5px; 
+    margin-top: 75px;
+}
+.order-btn {
+    position: sticky;
+    bottom: 80px;
+    border: none;
+    background-color: rgb(214, 65, 65);
+    color: white;
+    font-size: 18px;
+    padding: 15px 30px;
+    margin-left: 100%;
+    cursor: pointer;
+}
+.order-btn:hover {
+    color: white;
+    background-color: red;
+    transition: 0.2s;
+}
+.menu-edit-div {
+    margin-top: 85px;
+    display: block !important;
+}
+.menu-edit-category {
+    font-size: 25px;
+    margin-left: 10px;
+    color: rgb(50, 50, 50);
+}
+.menu-edit-options {
+    color: rgb(50, 50, 50);
+    padding: 3px;
+}
+.menu-edit-options:hover,
+.menu-edit-category:hover {
+    color: black;
+    transition: 0.2s;
+}
+
+/* Menu order */
+
+.order-menu {
+    width: 100%;
+    max-width: 1500px;
+    margin: auto;
+    padding-top: 100px;
+    text-align: center;
+}
+.order-food {
+    width: 40%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid grey;
+    border-width: 0 0 1px 0;
+}
+.order-food p {
+    font-size: 18px;
+    padding: 20px 0 10px 0;
+}
+.total-price {
+    font-size: 20px;
+    padding-top: 40px;
+}
+.order-info {
+    margin-top: 40px;
+}
+.order-info input {
+    width: 50%;
+    padding: 15px;
+    margin: 30px 10px 5px 10px;
+    box-sizing: border-box;
+    border: 1px solid grey;
+    font-size: 20px;
+    outline: none;
+}
+.order-info-user {
+    width: 30%;
+    margin: auto;
+    padding: 15px 15px 10px 15px;
+    background-color: rgb(241, 232, 232);
+}
+.order-user {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 0 5px 0;
+}
+.order-user p {
+    text-align: left;
+    font-size: 18px;
+}
+.ord-btns {
+    margin-bottom: 100px;
+}
+.confirm-ord-btn,
+.back-ord-btn {
+    border: none;
+    color: white;
+    font-size: 18px;
+    padding: 15px 30px;
+    margin: 50px 10px 0 10px;
+    cursor: pointer;
+}
+.confirm-ord-btn {
+    background-color: rgb(214, 65, 65);
+}
+.confirm-ord-btn:hover {
+    background-color: red;
+    transition: 0.2s;
+}
+.back-ord-btn {
+    background-color: rgb(50, 50, 50);
+}
+.back-ord-btn:hover {
+    background-color: black;
+    transition: 0.2s;
+}
+
+/* About */
+
+.about {
+    display: flex;
+    align-items: center;
+    width: 80%;
+    margin: 60px auto 0 auto;
+    padding: 50px 0;
+}
+.about img {
+    width: 45%;
+    height: 460px;
+    margin-right: 20px;
+    border-radius: 20px;
+}
+.about-info {
+    width: 55%;
+    padding: 40px;
+    background-color: rgb(241, 232, 232);
+    /* border-radius: 20px; */
+}
+.about-top {
+    display: flex;
+    justify-content: space-between;
+}
+.about-top h1 {
+    padding-bottom: 20px;
+}
+.about-top a {
+    margin-bottom: 30px;
+    padding: 15px 20px;
+    background-color: rgb(214, 65, 65);
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+}
+.about-top a:hover {
+    background-color: red;
+    transition: 0.2s;
+}
+.about-info p {
+    color: rgb(101, 101, 101);
+    font-size: 18px;
+    line-height: 22px;
+    white-space: pre-wrap;
+}
+
+/* Contact */
+
+.info {
+    margin: 1em 10%;
+}
+.info h1 {
+    font-size: 2.5em;
+    padding: 10px 0;
+}
+.info p {
+    font-size: 20px;
+    padding: 10px 0;
+}
+.info p a{
+    color: black;
+    text-decoration: none;
+}
+.contact {
+    display: flex;
+    padding: 1% 10% 0% 10%;
+}
+.contact-form {
+    width: 50%;
+    padding: 10px 30px 10px 10px;
+    margin-right: 5%;
+    background-color: rgb(255, 240, 240);
+}
+.contact-form h1 {
+    text-align: center;
+    margin: 20px 0;
+}
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 10px 5px 10px;
+    box-sizing: border-box;
+    border: 1px solid grey;
+    font-size: 20px;
+    outline: none;
+}
+.contact-form textarea {
+    height: 150px;
+    margin-bottom: 1px;
+}
+
+.contact-form button {
+    background-color: rgb(50, 50, 50);
+    border: none;
+    color: white;
+    font-size: 18px;
+    padding: 15px 30px;
+    margin: 10px;
+    cursor: pointer;
+}
+.contact-form button:hover {
+    color: white;
+    background-color: black;
+    transition: 0.2s;
+}
+.contact-messages-btn {
+    background-color: rgb(214, 65, 65);
+    color: white;
+    font-size: 18px;
+    padding: 15px 30px;
+    margin-left: 10px;
+    text-decoration: none;
+}
+.contact-messages-btn:hover {
+    color: white;
+    background-color: red;
+    transition: 0.2s;
+}
+.contact-map {
+    width: 50%;
+    margin: auto;
+}
+.contact-map iframe {
+    width: 100%;
+}
+.is-empty {
+    margin-left: 10px;
+    color: rgb(228, 42, 42);
+    font-size: 1em;
+}
+.is-empty-msg {
+    margin-top: 4px;
+}
+
+/* Messages */
+
+.received-messages {
+    width: 70%;
+    margin: 70px auto;
+    font-size: 18px;
+}
+.received-messages div{
+    border-style: solid;
+    border-width: 0 0 1px 0;
+    border-color: grey;
+    margin: 60px 20px 0 20px;
+    padding-bottom: 30px;
+}
+.msg-delete {
+    text-decoration: none;
+    color: rgb(50, 50, 50);
+    font-size: 18px;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+.msg-delete:hover {
+    text-decoration: underline;
+    color: black;
+    transition: 0.2s;
+}
+.message-info{
+    padding: 6px;
+}
+.message {
+    background-color: rgb(255, 240, 240);
+    color: rgb(101, 101, 101);
+    font-size: 20px;
+    margin-top: 10px;
+    padding: 20px;
+}
+.no-messages {
+    width: 40%;
+    margin: 100px auto;
+    padding: 100px;
+    text-align: center;
+    background-color: rgb(255, 240, 240);
+    border-radius: 20px;
+}
+
+/* Orders */
+
+.orders {
+    width: 70%;
+    margin: 70px auto 0 auto;
+}
+.orders h1 {
+    padding-bottom: 30px;
+}
+.order-list {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 50px;
+    padding: 20px;
+    font-size: 18px;
+    border-style: solid;
+    border-width: 0 0 1px 0;
+    border-color: grey;
+}
+.order-list-info {
+    width: 40%;
+}
+.order-list-info p {
+    padding-bottom: 10px;
+}
+.order-complete {
+    margin-top: 15px;
+}
+.order-complete a{
+    padding: 10px;
+    text-decoration: none;
+    background-color: rgb(214, 65, 65);
+    color: white;
+}
+.order-complete a:hover {
+    background-color: red;
+    transition: 0.2s;
+}
+.order-list-food {
+    width: 60%;
+    margin-left: 50px;
+    padding: 10px; 
+    background-color: rgb(255, 240, 240);
+}
+.order-list-food div {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+}
+.final-price {
+    padding: 5px 10px;
+    font-weight: bold;
+}
+.no-orders {
+    width: 50%;
+    margin: 50px auto;
+    padding: 100px;
+    text-align: center;
+    background-color: rgb(255, 240, 240);
+    border-radius: 20px;
+}
+.no-orders h1 {
+    padding: 0;
+}
+
+/* Administration */
+
+.is {
+    display: flex;
+    /* align-items: center; */
+    margin: 0 100px 0px 100px;
+}
+.container1 {
+    width: 60%;
+    margin: 60px 20px 0 0;
+}
+.container2 {
+    width: 40%;
+    margin: 60px 0 0 20px;
+}
+.is1-form {
+    margin: 30px 20px;
+    font-size: 18px;
+}
+.is1-input {
+    width: 60px;
+    padding: 5px;
+    font-size: 18px;
+}
+.is1-btn {
+    margin-left: 10px;
+    padding: 15px 20px;
+    font-size: 16px;
+    background-color: rgb(50, 50, 50);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.is1-btn:hover {
+    background-color: black;
+    transition: 0.2s;
+} 
+
+/* Login, Register */
+
+.login {
+    width: 100%;
+    max-width: 700px;
+    text-align: center;
+    margin: 100px auto 110px auto;
+    padding: 60px 20px 60px 20px;
+    background-color: rgb(255, 240, 240);
+}
+.login h2 {
+    font-size: 30px;
+}
+.login-form {
+    padding-top: 60px;
+}
+.login-form input {
+    width: 80%;
+    padding: 15px;
+    margin: 15px 10px 10px 10px;
+    box-sizing: border-box;
+    border: 1px solid grey;
+    font-size: 20px;
+    outline: none;
+}
+.login-form p {
+    color: red;
+    text-align: left;
+    font-size: 18px;
+    padding: 0 0 0 70px;
+}
+.register-form p {
+    padding: 0 0 5px 72px;
+}
+.login-submit {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 60px;
+}
+.login-submit a {
+    text-decoration: none;
+    color: rgb(50, 50, 50);
+    font-size: 20px;
+    padding: 0 0 15px 10px;
+}
+.login-submit a:hover {
+    color: black;
+    transition: 0.2s;
+}
+.login-submit button {
+    background-color: rgb(214, 65, 65);
+    border: none;
+    color: white;
+    font-size: 18px;
+    padding: 15px 20px;
+    margin: 30px 10px 50px 10px;
+    cursor: pointer;
+}
+.login-submit button:hover {
+    color: white;
+    background-color: red;
+    border-color: red;
+    transition: 0.2s;
+}
+.register-submit {
+    display: flex;
+    justify-content: flex-end;
+}
+.passwords {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 60px;
+}
+.passwords input {
+    width: 50%;
+}
+
+/* Confirm */
+
+.confirm {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    box-sizing: border-box;
+    opacity: 0;
+    animation-name: confirm-open;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.confirm-menu {
+    width: 100%;
+    max-width: 600px;
+    background-color: white;
+    font-size: 18px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transform: scale(0.75);
+    animation-name: confirm-menu-open;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.2s;
+}
+.confirm-menu-about {
+    width: 100%;
+    max-width: 900px;
+}
+.confirm-title {
+    background-color: rgb(20, 20, 20);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: bold;
+    padding: 15px;
+}
+.confirm-title-about {
+    padding: 25px;
+}
+.confirm-close {
+    background: none;
+    outline: none;
+    border: none;
+    transform: scale(2.5);
+    color: white;
+}
+.confirm-close:hover {
+    color: grey;
+    transition: 0.2s;
+    cursor: pointer;
+}
+.confirm-menu p {
+    padding: 20px 0 0 18px;
+}
+.confirm-menu input {
+    width: 89%;
+    padding: 2%;
+    margin: 20px 3% 0 3%;
+    border: 1px solid grey;
+    font-size: 18px;
+    outline: none;
+}
+.confirm-menu textarea {
+    width: 94%;
+    height: 230px;
+    padding: 2%;
+    margin: 20px 3% 0 3%;
+    box-sizing: border-box;
+    border: 1px solid grey;
+    font-size: 20px;
+    outline: none;
+    resize: none;
+}
+.confirm-btn {
+    display: flex;
+    justify-content: flex-end;
+    background-color: rgb(255, 240, 240);
+    margin-top: 20px;
+}
+.confirm-btn-yes,
+.confirm-btn-no {
+    border: none;
+    color: white;
+    font-size: 18px;
+    padding: 10px;
+    margin: 20px 23px 20px 0;
+    cursor: pointer;
+    outline: none;
+}
+.confirm-btn-yes {
+    margin-right: 10px;
+    background-color: rgb(214, 65, 65);
+}
+.confirm-btn-yes:hover {
+    background-color: red;
+    transition: 0.2s;
+}
+.confirm-btn-no {
+    background-color: rgb(50, 50, 50);
+}
+.confirm-btn-no:hover {
+    background-color: black;
+    transition: 0.2s;
+}
+.confirm-btn-a {
+    text-decoration: none;
+}
+@keyframes confirm-open {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+@keyframes confirm-menu-open {
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Error 404 */
+
+.e404 {
+    text-align: center;
+    padding-top: 10%;
+    font-size: 30px;
+}
