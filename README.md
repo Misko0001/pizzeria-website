@@ -2,4 +2,4 @@
 
 ## Desciption
 
-* Created a full-stack responsive website using PHP and MySQL, that allows users to add to cart, send orders, and register on the website. Website admins can also view all orders, messages and some charts made using Chart.js.
+It allows users to order food, register and contact admins. Admins can add, edit and delete new food and categories, read messages from users and view important charts.
