@@ -4,8 +4,8 @@
 
 It allows users to order food, register and contact admins. Admins can add, edit and delete new food and categories, read messages from users and view important charts.
 
-## Project setup
+## Setup
 
 Download the zip file
-Extract **pizzeria-website-main** folder 
-Copy and paste the folder to xampp/htdocs
+Extract the **pizzeria-website-main** file
+Copy and paste it to xampp\htdocs
