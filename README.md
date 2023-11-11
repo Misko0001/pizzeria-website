@@ -11,9 +11,9 @@ Download the zip file, extract the **pizzeria-website-main** file and copy and p
 Open PHPMyAdmin (http://localhost/phpmyadmin) and create a new database with the name **pizzeria-db**.
 Import **pizzeria-db.sql** from the zip file.
 
-Now you access the website (http://localhost/pizzeria-website-main/).
+Now you can access the website (http://localhost/pizzeria-website-main/).
 
 ## Login credentials for the admin
 
-Username: **admin**
+Username: **admin**<br>
 Password: **admin**
