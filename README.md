@@ -8,10 +8,10 @@ It allows users to order food, register and contact admins. Admins can add, edit
 
 Download the zip file, extract the **pizzeria-website-main.zip** file and copy and paste it to **xampp\htdocs**.
 
-Open PHPMyAdmin (http://localhost/phpmyadmin) and create a new database with the name **pizzeria-db**.<br>
+Open PHPMyAdmin (https://localhost/phpmyadmin) and create a new database with the name **pizzeria-db**.<br>
 Import **pizzeria-db.sql** from the zip file.
 
-Now you can access the website (http://localhost/pizzeria-website-main/).
+Now you can access the website (https://localhost/pizzeria-website-main/).
 
 ## Login credentials for the admin
 
