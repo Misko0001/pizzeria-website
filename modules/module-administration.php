@@ -106,7 +106,7 @@ if (isset($_POST["startDate"]) && isset($_POST["endDate"])) {
     $endDate = substr($_POST["endDate"], 0, 4) . "-" . substr($_POST["endDate"], 5, 2);
 } else {
     $endDate = date("Y-m-d");
-    $month = substr($endDate, 5, 2) - 6; 
+    $month = substr($endDate, 5, 2) - 5; 
     $year = substr($endDate, 0, 4);
     if ($month < 1) {
         $month += 12;
