@@ -45,7 +45,7 @@ fetch("./public/js/daily-earnings.json")
             obj.data.datasets[0].data.push(arr[i][1]);
         }
 
-        let averageEarnings = new Chart(is, obj);
+        let dailyEarnings = new Chart(is, obj);
     });
 
 fetch("./public/js/monthly-amount.json")
@@ -53,11 +53,6 @@ fetch("./public/js/monthly-amount.json")
     .then((json) => {
         let is = document.getElementById("is2").getContext("2d");
         let arr = Object.entries(json);
-
-        position = "right";
-        if (arr.length > 23) {
-            position = "bottom";
-        }
 
         let obj = {
             type: "doughnut",
@@ -73,12 +68,15 @@ fetch("./public/js/monthly-amount.json")
             options: {
                 title: {
                     display: true,
-                    text: "Broj prodatih proizvoda u prethodnom mesecu",
+                    text: "Broj prodatih proizvoda ovog meseca po kategorijama",
                     fontSize: 23,
                 },
                 legend: {
                     display: true,
-                    position: position
+                    position: "right",
+                    labels: {
+                        fontSize: 18
+                    }
                 },
                 layout: {
                     padding: 20
@@ -87,9 +85,9 @@ fetch("./public/js/monthly-amount.json")
         };
 
         let colors = [
-            "rgb(255, 105, 97)", 
-            "rgb(119, 221, 119)", 
+            "rgb(255, 105, 97)",  
             "rgb(108, 160, 220)", 
+            "rgb(119, 221, 119)",
             "rgb(86, 108, 248)", 
             "rgb(215, 201, 38)", 
             "rgb(166, 42, 4)", 
@@ -103,5 +101,62 @@ fetch("./public/js/monthly-amount.json")
             obj.data.datasets[0].backgroundColor.push(colors[i % colors.length]);
         }
 
-        let averageEarnings = new Chart(is, obj);
+        let monthlyAmount = new Chart(is, obj);
+    });
+
+fetch("./public/js/montly-earnings.json")
+    .then((response) => response.json())
+    .then((json) => {
+        let is = document.getElementById("is3").getContext("2d");
+        let arr = Object.entries(json);
+
+        let obj = {
+            type: 'bar',
+            data: {
+                labels: [],
+                datasets: []
+            },
+            options: {
+                title: {
+                    display: true,
+                    text: "Mesečna zarada picerije",
+                    fontSize: 23,
+                    padding: 30
+                },
+            }
+        };
+
+        let colors = [
+            "rgb(108, 160, 220)",
+            "rgb(255, 105, 97)",  
+            "rgb(119, 221, 119)", 
+            "rgb(86, 108, 248)", 
+            "rgb(215, 201, 38)", 
+            "rgb(166, 42, 4)", 
+            "rgb(10, 171, 161)", 
+            "rgb(108, 244, 160)"
+        ]
+
+        let counter = 0;
+        for (let key in arr[0][1]) {
+            let dataset = {
+                label: "",
+                data: [],
+                backgroundColor: colors[counter++ % colors.length],
+                stack: "Stack 0"
+            };
+            dataset.label = key;
+            obj.data.datasets.push(dataset);
+        }
+
+        for (let i = 0; i < arr.length; i++) {
+            obj.data.labels.push(arr[i][0]);
+            for (let j = 0; j < obj.data.datasets.length; j++) {
+                let label = obj.data.datasets[j].label;
+                obj.data.datasets[j].data.push(arr[i][1][label]);
+            }
+        }
+
+        let monthlyEarnings = new Chart(is, obj);
+
     });
