@@ -4,6 +4,22 @@
     font-family: 'Trebuchet MS', sans-serif;
 }
 
+/*
+Nav menu
+Footer
+Home
+Menu
+Menu order
+About
+Contact
+Messages
+Orders
+Administration
+Login, Register
+Confirm
+Error 404
+*/
+
 /* Nav menu */
 
 nav {
@@ -57,6 +73,15 @@ nav {
     text-align: center;
     color: white;
     font-weight: bold;
+}
+.footer p a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+.footer p a:hover {
+    color: rgb(178, 178, 178);
+    transition: 0.2s;
 }
 
 /* Home */
@@ -548,18 +573,20 @@ nav {
 
 .is {
     display: flex;
-    /* align-items: center; */
     margin: 0 100px 0px 100px;
 }
 .container1 {
     width: 60%;
-    margin: 60px 20px 0 0;
+    margin: 60px 10px 0 0;
 }
-.container2 {
-    width: 40%;
-    margin: 60px 0 0 20px;
+.is1 {
+    padding: 0 20px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: rgb(255, 240, 240);
 }
-.is1-form {
+.is1-form,
+.is3-form {
     margin: 30px 20px;
     font-size: 18px;
 }
@@ -568,7 +595,8 @@ nav {
     padding: 5px;
     font-size: 18px;
 }
-.is1-btn {
+.is1-btn,
+.is3-btn {
     margin-left: 10px;
     padding: 15px 20px;
     font-size: 16px;
@@ -577,10 +605,33 @@ nav {
     border: none;
     cursor: pointer;
 }
-.is1-btn:hover {
+.is1-btn:hover,
+.is3-btn:hover {
     background-color: black;
     transition: 0.2s;
-} 
+}
+.is3 {
+    margin: 30px 0 0 0;
+    padding: 0 20px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: rgb(255, 240, 240);
+}
+.startDate,
+.endDate {
+    width: 140px;
+    padding: 5px;
+    font-size: 18px;
+}
+.container2 {
+    width: 40%;
+    height: 45%;
+    margin: 60px 0 0 20px;
+    padding: 10px 20px 0 20px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: rgb(255, 240, 240);
+}
 
 /* Login, Register */
 
