@@ -102,8 +102,13 @@ fclose($fp);
 
 // Montly earnings
 if (isset($_POST["startDate"]) && isset($_POST["endDate"])) {
-    $startDate = substr($_POST["startDate"], 0, 4) . "-" . substr($_POST["startDate"], 5, 2) . "-01";
-    $endDate = substr($_POST["endDate"], 0, 4) . "-" . substr($_POST["endDate"], 5, 2);
+    if ($_POST["startDate"] > $_POST["endDate"]) {
+        $endDate = $_POST["startDate"];
+        $startDate = $_POST["endDate"];
+    } else {
+        $startDate = $_POST["startDate"];
+        $endDate = $_POST["endDate"];
+    }
 } else {
     $endDate = date("Y-m-d");
     $month = substr($endDate, 5, 2) - 5; 
@@ -116,29 +121,6 @@ if (isset($_POST["startDate"]) && isset($_POST["endDate"])) {
         $month = "0" . $month;
     }
     $startDate = $year . "-" . $month . "-01";
-}
-
-if ($startDate > $endDate) {
-    $endDate = substr($_POST["startDate"], 0, 4) . "-" . substr($_POST["startDate"], 5, 2);
-    $startDate = substr($_POST["endDate"], 0, 4) . "-" . substr($_POST["endDate"], 5, 2) . "-01";
-}
-
-if ($endDate != date("Y-m-d")) {
-    $month = substr($endDate, 5, 2); 
-    $year = substr($endDate, 0, 4);
-    switch ($month) {
-        case 1: case 3: case 5: case 7: case 8: case 10: case 12:
-            $endDate .= "-31"; break;
-        case 4: case 6: case 9: case 11:
-            $endDate .= "-30"; break;
-        case 2:
-            if ($year % 4 == 0) {
-                $endDate .= "-29";
-            } else {
-                $endDate .= "-28";
-            }
-            break;
-    }
 }
 
 $sql = "SELECT 
