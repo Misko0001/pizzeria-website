@@ -14,7 +14,7 @@ include TEMPLATE_NAV;
         <div class="is3">
             <canvas id="is3"></canvas>
             <form class="is3-form" method="post">
-                Od <input type="date" class="startDate" name="startDate" value="<?= $startDate ?>"> 
+                Prikaži od <input type="date" class="startDate" name="startDate" value="<?= $startDate ?>"> 
                 do <input type="date" class="endDate" name="endDate" value="<?= $endDate ?>">
                 <button class="is3-btn">Filtriraj podatke</button>
             </form>
