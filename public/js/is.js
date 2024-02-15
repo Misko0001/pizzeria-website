@@ -137,8 +137,24 @@ fetch("./public/js/montly-earnings.json")
             "rgb(108, 244, 160)"
         ]
 
+        let labelsLength = 0;
+        let labelsMaxLength = 0;
+        let labelsMonth = 0;
+        for (let i = 0; i < arr.length; i++) {
+            for (const category in arr[i][1]) {
+                if (arr[i][1][category] !== undefined) {
+                    labelsLength++;
+                }
+            }
+            if (labelsLength > labelsMaxLength) {
+                labelsMaxLength = labelsLength;
+                labelsMonth = i;
+            }
+            labelsLength = 0;
+        }
+
         let counter = 0;
-        for (let key in arr[0][1]) {
+        for (let key in arr[labelsMonth][1]) {
             let dataset = {
                 label: "",
                 data: [],
@@ -158,5 +174,4 @@ fetch("./public/js/montly-earnings.json")
         }
 
         let monthlyEarnings = new Chart(is, obj);
-
     });
